@@ -1,7 +1,17 @@
 <script setup>
 	import { members } from '@/configs/members.json';
-	import { connections } from '@/configs/connections.json';
 	import { central_member } from '@/configs/members.json';
+
+	const connections = [
+		{
+			name: 'distant',
+			style: 'w-[116%] h-[116%]',
+			line_length: 'h-[35%]',
+		},
+		{ name: 'far', style: 'w-[90%] h-[90%]', line_length: 'h-[32%]' },
+		{ name: 'medium', style: 'w-[70%] h-[70%]', line_length: 'h-[32%]' },
+		{ name: 'close', style: 'w-[50%] h-[50%]', line_length: 'h-[32%]' },
+	];
 
 	const connectionGroup = ref([]);
 
@@ -25,6 +35,7 @@
 		);
 
 		connectionGroup.value = result;
+		console.log(connectionGroup.value);
 	});
 </script>
 
@@ -53,121 +64,24 @@
 	</main>
 </template>
 
-<!-- <style scoped>
-	.cmty {
-		width: 500px;
-		height: 500px;
-		border-radius: 50%;
-		border: 3px solid rgb(197, 197, 197);
-		margin: 6rem auto;
-		position: relative;
+<style scoped>
+	.distant {
+		width: 116%;
+		height: 116%;
 	}
 
-	.cmty-sc {
-		width: 550px;
-		height: 550px;
-		/* border: 1px solid blue; */
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
+	.far {
+		width: 90%;
+		height: 90%;
 	}
 
-	.av {
-		--rotation: 0;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		transform: rotate(var(--rotation));
-
-		/* border: 1px solid green; */
+	.medium {
+		width: 70%;
+		height: 70%;
 	}
 
-	.av-1 {
-		--rotation: 30deg;
+	.close {
+		width: 50%;
+		height: 50%;
 	}
-
-	.av-2 {
-		--rotation: 60deg;
-	}
-
-	.av-3 {
-		--rotation: 90deg;
-	}
-
-	.av-4 {
-		--rotation: 120deg;
-	}
-
-	.av-5 {
-		--rotation: 150deg;
-	}
-
-	.av-6 {
-		--rotation: 180deg;
-	}
-
-	.av-7 {
-		--rotation: 210deg;
-	}
-
-	.av-8 {
-		--rotation: 240deg;
-	}
-
-	.av-9 {
-		--rotation: 270deg;
-	}
-
-	.av-10 {
-		--rotation: 300deg;
-	}
-
-	.av-11 {
-		--rotation: 330deg;
-	}
-
-	.av-12 {
-		--rotation: 360deg;
-	}
-
-	.av-img {
-		width: 4rem;
-		height: 4rem;
-		border-radius: 50%;
-		border: 2px solid black;
-	}
-
-	.center {
-		width: 8rem;
-		height: 8rem;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		border-radius: 50%;
-		/* overflow: hidden; */
-		border: 10px solid white;
-		background: center;
-		object-fit: cover;
-	}
-
-	.center-img {
-		border: 2px solid black;
-		border-radius: 50%;
-	}
-
-	.line {
-		position: absolute;
-		left: 50%;
-		bottom: 50%;
-		width: 4px;
-		height: 35%;
-		border-radius: 10px;
-		background-color: rgb(0, 0, 80);
-		transform: translateX(-50%) rotate(0deg);
-		transform-origin: bottom;
-	}
-</style> -->
+</style>

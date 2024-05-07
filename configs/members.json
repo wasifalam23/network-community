@@ -8,9 +8,9 @@
 		{
 			"name": "John Smith",
 			"image": "https://mighty.tools/mockmind-api/content/human/65.jpg",
-			"connection": "distant",
+			"connection": "far",
 			"size": "lg",
-			"angle": "30deg"
+			"angle": "15deg"
 		},
 		{
 			"name": "Emma Jones",

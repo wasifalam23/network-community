@@ -28,3 +28,22 @@
 		</div>
 	</div>
 </template>
+
+<style scoped>
+	/* line styles */
+	.line-distant {
+		height: 35%;
+	}
+
+	.line-far {
+		height: 32%;
+	}
+
+	.line-medium {
+		height: 32%;
+	}
+
+	.line-close {
+		height: 32%;
+	}
+</style>
