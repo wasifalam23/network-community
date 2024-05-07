@@ -3,60 +3,86 @@
 </script>
 
 <template>
-	<main class="cmty">
-		<div class="cmty-sc">
-			<div class="line line-1"></div>
-			<div class="line line-2"></div>
-			<div class="line line-3"></div>
-			<div class="line line-4"></div>
-			<div class="line line-5"></div>
-			<div class="line line-6"></div>
-			<div class="line line-7"></div>
-			<div class="line line-8"></div>
-			<div class="line line-9"></div>
-			<div class="line line-10"></div>
-			<div class="line line-11"></div>
-			<div class="line line-12"></div>
+	<main
+		class="w-[500px] h-[500px] rounded-full my-24 mx-auto relative border-[3px]">
+		<div
+			class="w-[550px] h-[550px] absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2">
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom rotate-[30deg]"></div>
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
+			<div
+				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
 
-			<div class="center">
-				<img class="center-img" :src="img" alt="" />
+			<div
+				class="w-32 h-32 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden border-[10px] border-white bg-center rounded-full">
+				<img class="border-2 border-black rounded-full" :src="img" alt="" />
 			</div>
 
-			<div class="av av-1">
-				<img class="av-img" :src="img" alt="" />
+			<div class="absolute h-full w-full flex justify-center rotate-[30deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
-			<div class="av av-2">
-				<img class="av-img" :src="img" alt="" />
+
+			<div class="absolute h-full w-full flex justify-center rotate-[60deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
-			<div class="av av-3">
-				<img class="av-img" :src="img" alt="" />
+
+			<div class="absolute h-full w-full flex justify-center rotate-[90deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
-			<div class="av av-4">
-				<img class="av-img" :src="img" alt="" />
+
+			<div class="absolute h-full w-full flex justify-center rotate-[120deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
-			<div class="av av-5">
-				<img class="av-img" :src="img" alt="" />
+
+			<div class="absolute h-full w-full flex justify-center rotate-[150deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
-			<div class="av av-6">
-				<img class="av-img" :src="img" alt="" />
+
+			<div class="absolute h-full w-full flex justify-center rotate-[180deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
-			<div class="av av-7">
-				<img class="av-img" :src="img" alt="" />
+
+			<div class="absolute h-full w-full flex justify-center rotate-[210deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
-			<div class="av av-8">
-				<img class="av-img" :src="img" alt="" />
+
+			<div class="absolute h-full w-full flex justify-center rotate-[240deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
-			<div class="av av-9">
-				<img class="av-img" :src="img" alt="" />
+
+			<div class="absolute h-full w-full flex justify-center rotate-[270deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
-			<div class="av av-10">
-				<img class="av-img" :src="img" alt="" />
+
+			<div class="absolute h-full w-full flex justify-center rotate-[300deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
-			<div class="av av-11">
-				<img class="av-img" :src="img" alt="" />
+
+			<div class="absolute h-full w-full flex justify-center rotate-[330deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
-			<div class="av av-12">
-				<img class="av-img" :src="img" alt="" />
+
+			<div class="absolute h-full w-full flex justify-center rotate-[360deg]">
+				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
 			</div>
 		</div>
 	</main>
