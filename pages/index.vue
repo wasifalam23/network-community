@@ -15,7 +15,7 @@
 		'360deg',
 	];
 
-	const config = ref([
+	const circle_config = ref([
 		{
 			style: 'w-[110%] h-[110%] z-[1000]',
 			line_style: 'h-[35%]',
@@ -47,14 +47,16 @@
 		// 	max_member: 2,
 		// 	members: [
 		// 		{
-		// 			style: 'h-16 w-16',
+		// 			name: 'Zoe Taylor',
 		// 			image: 'https://mighty.tools/mockmind-api/content/human/8.jpg',
-		// 			position: 'rotate-[90deg]',
+		// 			size: 'lg',
+		// 			angle: '90deg',
 		// 		},
 		// 		{
-		// 			style: 'h-16 w-16',
+		// 			name: 'Alex Davis',
 		// 			image: 'https://mighty.tools/mockmind-api/content/human/46.jpg',
-		// 			position: 'rotate-[300deg]',
+		// 			size: 'lg',
+		// 			angle: '300deg',
 		// 		},
 		// 	],
 		// },
@@ -65,7 +67,7 @@
 	<main
 		class="w-[600px] h-[600px] rounded-full my-24 mx-auto relative border-[3px]">
 		<CmtyCircle
-			v-for="circle in config"
+			v-for="circle in circle_config"
 			:class="circle.style"
 			:line_style="circle.line_style"
 			:members="circle.members" />
@@ -190,6 +192,3 @@
 		transform-origin: bottom;
 	}
 </style> -->
-
-
-</style>
