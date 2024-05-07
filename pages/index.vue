@@ -1,94 +1,80 @@
 <script setup>
-	import img from "@/assets/default.jpg";
+	const positions = [
+		'0deg',
+		'30deg',
+		'60deg',
+		'90deg',
+		'120deg',
+		'150deg',
+		'180deg',
+		'210deg',
+		'240deg',
+		'270deg',
+		'300deg',
+		'330deg',
+		'360deg',
+	];
+
+	const sizes = [
+		{ name: 'xl', size: '20' },
+		{ name: 'lg', size: '16' },
+	];
+
+	const config = ref([
+		{
+			style: 'w-[110%] h-[110%] z-[1000]',
+			line_style: 'h-[35%]',
+			max_member: 3,
+			member_info: [
+				{
+					size: { name: 'lg', size: '16' },
+					image: 'https://mighty.tools/mockmind-api/content/human/65.jpg',
+					position: 'rotate-[30deg]',
+				},
+				{
+					size: { name: 'lg', size: '16' },
+					image: 'https://mighty.tools/mockmind-api/content/human/44.jpg',
+					position: 'rotate-[150deg]',
+				},
+				{
+					size: { name: 'xl', size: '20' },
+					image: 'https://mighty.tools/mockmind-api/content/human/57.jpg',
+					position: 'rotate-[240deg]',
+				},
+			],
+		},
+		{
+			style: 'w-[90%] h-[90%]',
+			line_style: 'h-[32%]',
+			max_member: 2,
+			member_info: [
+				{
+					size: { name: 'lg', size: '16' },
+					image: 'https://mighty.tools/mockmind-api/content/human/8.jpg',
+					position: 'rotate-[90deg]',
+				},
+				{
+					size: { name: 'lg', size: '16' },
+					image: 'https://mighty.tools/mockmind-api/content/human/46.jpg',
+					position: 'rotate-[300deg]',
+				},
+			],
+		},
+	]);
 </script>
 
 <template>
 	<main
-		class="w-[500px] h-[500px] rounded-full my-24 mx-auto relative border-[3px]">
-		<div
-			class="w-[550px] h-[550px] absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2">
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom rotate-[30deg]"></div>
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
-			<div
-				class="absolute left-1/2 bottom-1/2 w-1 h-[35%] bg-blue-950 -translate-x-1/2 origin-bottom"></div>
-
-			<div
-				class="w-32 h-32 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden border-[10px] border-white bg-center rounded-full">
-				<img class="border-2 border-black rounded-full" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[30deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[60deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[90deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[120deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[150deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[180deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[210deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[240deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[270deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[300deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[330deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-
-			<div class="absolute h-full w-full flex justify-center rotate-[360deg]">
-				<img class="w-16 h-16 rounded-full border-2" :src="img" alt="" />
-			</div>
-		</div>
+		class="w-[600px] h-[600px] rounded-full my-24 mx-auto relative border-[3px]">
+		<CmtyCircle
+			v-for="circle in config"
+			:class="circle.style"
+			:line_style="circle.line_style"
+			:member_info="circle.member_info" />
 	</main>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 	.cmty {
 		width: 500px;
 		height: 500px;
@@ -204,5 +190,17 @@
 		background-color: rgb(0, 0, 80);
 		transform: translateX(-50%) rotate(0deg);
 		transform-origin: bottom;
+	}
+</style> -->
+
+<style scoped>
+	.size-xl {
+		width: 110%;
+		height: 110%;
+	}
+
+	.size-lg {
+		width: 90%;
+		height: 90%;
 	}
 </style>
