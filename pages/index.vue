@@ -15,51 +15,49 @@
 		'360deg',
 	];
 
-	const sizes = [
-		{ name: 'xl', size: '20' },
-		{ name: 'lg', size: '16' },
-	];
-
 	const config = ref([
 		{
 			style: 'w-[110%] h-[110%] z-[1000]',
 			line_style: 'h-[35%]',
 			max_member: 3,
-			member_info: [
+			members: [
 				{
-					size: { name: 'lg', size: '16' },
+					name: 'John Smith',
 					image: 'https://mighty.tools/mockmind-api/content/human/65.jpg',
-					position: 'rotate-[30deg]',
+					size: 'lg',
+					angle: '30deg',
 				},
 				{
-					size: { name: 'lg', size: '16' },
+					name: 'Emma Jones',
 					image: 'https://mighty.tools/mockmind-api/content/human/44.jpg',
-					position: 'rotate-[150deg]',
+					size: 'lg',
+					angle: '150deg',
 				},
 				{
-					size: { name: 'xl', size: '20' },
+					name: 'Ben Miller',
 					image: 'https://mighty.tools/mockmind-api/content/human/57.jpg',
-					position: 'rotate-[240deg]',
+					size: 'xl',
+					angle: '240deg',
 				},
 			],
 		},
-		{
-			style: 'w-[90%] h-[90%]',
-			line_style: 'h-[32%]',
-			max_member: 2,
-			member_info: [
-				{
-					size: { name: 'lg', size: '16' },
-					image: 'https://mighty.tools/mockmind-api/content/human/8.jpg',
-					position: 'rotate-[90deg]',
-				},
-				{
-					size: { name: 'lg', size: '16' },
-					image: 'https://mighty.tools/mockmind-api/content/human/46.jpg',
-					position: 'rotate-[300deg]',
-				},
-			],
-		},
+		// {
+		// 	style: 'w-[90%] h-[90%]',
+		// 	line_style: 'h-[32%]',
+		// 	max_member: 2,
+		// 	members: [
+		// 		{
+		// 			style: 'h-16 w-16',
+		// 			image: 'https://mighty.tools/mockmind-api/content/human/8.jpg',
+		// 			position: 'rotate-[90deg]',
+		// 		},
+		// 		{
+		// 			style: 'h-16 w-16',
+		// 			image: 'https://mighty.tools/mockmind-api/content/human/46.jpg',
+		// 			position: 'rotate-[300deg]',
+		// 		},
+		// 	],
+		// },
 	]);
 </script>
 
@@ -70,7 +68,7 @@
 			v-for="circle in config"
 			:class="circle.style"
 			:line_style="circle.line_style"
-			:member_info="circle.member_info" />
+			:members="circle.members" />
 	</main>
 </template>
 
@@ -193,14 +191,5 @@
 	}
 </style> -->
 
-<style scoped>
-	.size-xl {
-		width: 110%;
-		height: 110%;
-	}
 
-	.size-lg {
-		width: 90%;
-		height: 90%;
-	}
 </style>
