@@ -1,0 +1,44 @@
+{
+	"central_member": {
+		"name": "John Smith",
+		"image": "https://mighty.tools/mockmind-api/content/human/41.jpg"
+	},
+
+	"members": [
+		{
+			"name": "John Smith",
+			"image": "https://mighty.tools/mockmind-api/content/human/65.jpg",
+			"connection": "distant",
+			"size": "lg",
+			"angle": "30deg"
+		},
+		{
+			"name": "Emma Jones",
+			"image": "https://mighty.tools/mockmind-api/content/human/44.jpg",
+			"connection": "distant",
+			"size": "lg",
+			"angle": "150deg"
+		},
+		{
+			"name": "Ben Miller",
+			"image": "https://mighty.tools/mockmind-api/content/human/57.jpg",
+			"connection": "distant",
+			"size": "xl",
+			"angle": "240deg"
+		},
+		{
+			"name": "Zoe Taylor",
+			"image": "https://mighty.tools/mockmind-api/content/human/8.jpg",
+			"connection": "far",
+			"size": "lg",
+			"angle": "90deg"
+		},
+		{
+			"name": "Alex Davis",
+			"image": "https://mighty.tools/mockmind-api/content/human/46.jpg",
+			"connection": "far",
+			"size": "lg",
+			"angle": "300deg"
+		}
+	]
+}

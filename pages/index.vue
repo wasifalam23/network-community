@@ -1,76 +1,55 @@
 <script setup>
-	const positions = [
-		'0deg',
-		'30deg',
-		'60deg',
-		'90deg',
-		'120deg',
-		'150deg',
-		'180deg',
-		'210deg',
-		'240deg',
-		'270deg',
-		'300deg',
-		'330deg',
-		'360deg',
-	];
+	import { members } from '@/configs/members.json';
+	import { connections } from '@/configs/connections.json';
+	import { central_member } from '@/configs/members.json';
 
-	const circle_config = ref([
-		{
-			style: 'w-[110%] h-[110%] z-[1000]',
-			line_style: 'h-[35%]',
-			max_member: 3,
-			members: [
-				{
-					name: 'John Smith',
-					image: 'https://mighty.tools/mockmind-api/content/human/65.jpg',
-					size: 'lg',
-					angle: '30deg',
-				},
-				{
-					name: 'Emma Jones',
-					image: 'https://mighty.tools/mockmind-api/content/human/44.jpg',
-					size: 'lg',
-					angle: '150deg',
-				},
-				{
-					name: 'Ben Miller',
-					image: 'https://mighty.tools/mockmind-api/content/human/57.jpg',
-					size: 'xl',
-					angle: '240deg',
-				},
-			],
-		},
-		// {
-		// 	style: 'w-[90%] h-[90%]',
-		// 	line_style: 'h-[32%]',
-		// 	max_member: 2,
-		// 	members: [
-		// 		{
-		// 			name: 'Zoe Taylor',
-		// 			image: 'https://mighty.tools/mockmind-api/content/human/8.jpg',
-		// 			size: 'lg',
-		// 			angle: '90deg',
-		// 		},
-		// 		{
-		// 			name: 'Alex Davis',
-		// 			image: 'https://mighty.tools/mockmind-api/content/human/46.jpg',
-		// 			size: 'lg',
-		// 			angle: '300deg',
-		// 		},
-		// 	],
-		// },
-	]);
+	const connectionGroup = ref([]);
+
+	onMounted(() => {
+		// Group members by connection type
+		const groupedByConnection = connections.map((conn) => {
+			const matchingMembers = members.filter(
+				(member) => member.connection === conn.name
+			);
+
+			return {
+				style: conn.style,
+				line_style: conn.line_length,
+				members: matchingMembers,
+			};
+		});
+
+		// Remove any objects without members
+		const result = groupedByConnection.filter(
+			(group) => group.members.length > 0
+		);
+
+		connectionGroup.value = result;
+	});
 </script>
 
 <template>
 	<main
 		class="w-[600px] h-[600px] rounded-full my-24 mx-auto relative border-[3px]">
-		<CmtyCircle
-			v-for="circle in circle_config"
-			:class="circle.style"
-			:line_style="circle.line_style"
-			:members="circle.members" />
+		<div
+			class="w-[94%] h-[94%] absolute left-1/2 bottom-1/2 rounded-full bg-gray-100 -translate-x-1/2 translate-y-1/2">
+			<CmtyCircle
+				v-for="group in connectionGroup"
+				:class="group.style"
+				:line_style="group.line_style"
+				:members="group.members" />
+
+			<!-- Center Member -->
+			<div
+				class="w-24 h-w-24 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-[6px] border-gray-100 bg-center rounded-full">
+				<div>
+					<img
+						class="border-[3px] border-gray-500 rounded-full"
+						:src="central_member.image"
+						:alt="central_member.name" />
+				</div>
+			</div>
+		</div>
 	</main>
 </template>
 
