@@ -36,9 +36,9 @@
 		{
 			"name": "Alex Davis",
 			"image": "https://mighty.tools/mockmind-api/content/human/46.jpg",
-			"connection": "far",
-			"size": "lg",
-			"angle": "300deg"
+			"connection": "distant",
+			"size": "xl",
+			"angle": "315deg"
 		}
 	]
 }
